@@ -11,6 +11,7 @@ export default defineComponent(
     const clickHandler = async () => {
       try {
         loading.value = true;
+        // onClick事件没传递时，不执行await
         props.onClick && (await props.onClick());
         loading.value = false;
       } catch (error) {
