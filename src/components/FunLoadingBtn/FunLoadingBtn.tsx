@@ -11,7 +11,7 @@ export default defineComponent(
     const clickHandler = async () => {
       try {
         loading.value = true;
-        await props.onClick();
+        props.onClick && (await props.onClick());
         loading.value = false;
       } catch (error) {
         console.error(error);
@@ -27,7 +27,7 @@ export default defineComponent(
             onClick={clickHandler}
             loading={loading.value}
           >
-            {slots.default?.()}
+            {slots.default?.() || "按钮"}
           </Button>
         </>
       );
