@@ -2,7 +2,7 @@ import type { Directive, DirectiveBinding } from "vue";
 /**
  * @description 📚 点击元素移除指定类名
  * @param  {array} 需要移除类名的数组
- * @docs  v-remove-class 其中repeat表示元素离开可视区域后会自动将添加的类名卸载掉
+ * @docs  v-on-click-remove-class
  * 1.单独注册：使用方式，在main.js中引入并注册
  * import onClickRemoveClass from './direct/onClickRemoveClass'
  * app.directive('on-click-remove-class', onClickRemoveClass);
